@@ -1,4 +1,4 @@
-// This file will handle the logic to generate the session link when a POST request is made.
+
 import { NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid"; // To generate unique session IDs
 
