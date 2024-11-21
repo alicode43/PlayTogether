@@ -24,6 +24,7 @@ export default function HomePage() {
       console.log(data);
       if (data.sessionId) {
         const currentUrl = window.location.origin;
+     
         setGeneratedLink(`${currentUrl}/view/${data.sessionId}`);
         setErrorMessage(""); 
       }

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:4000");
+const socket = io(process.env.BACKEND_URL || "http://localhost:4000");
 
 export default function ViewerPage({ params }) {
   const [sessionId, setSessionId] = useState(null);
@@ -101,5 +101,8 @@ export default function ViewerPage({ params }) {
     return () => clearInterval(interval);
   }, [sessionId]);
 
-  return <div id="player" />;
+  return <>
+
+<div id="player" />;
+  </> 
 }
